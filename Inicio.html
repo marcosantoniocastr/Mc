@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> 
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style type="text/css" media="all">
+  
+  
+    nav {
+  background-color: #57707A;
+  border: 10px;
+  border-radius: 25px;
+}
+
+.menu-icon {
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: transparent; /* Agrega esta línea */
+}
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  flex-grow: 1;
+  text-align: center;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li a:hover {
+  background-color: #ddd;
+}
+
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 600px) {
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    text-align: left;
+  }
+
+  input[type="checkbox"]:checked ~ #menu {
+    display: flex;
+  }
+}
+
+  .conten {
+  padding: 10px;
+  text-align: center;
+  }
+  
+  .conten2 {
+    padding: 15px;
+  }
+  
+  input[type="checkbox"] {
+  display: none;
+}
+
+.aline {
+  text-align: center;
+}
+
+   contenedor1 {
+         padding: 15px;
+        max-width: 600px;
+        background-color: ;
+        border-radius: 10px;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        overflow: auto;
+      }
+
+      .some {
+        width: 100%;
+        height: 36vh;
+      border-radius: 15px;
+      }
+
+
+
+  </style>
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul id="menu">
+      <li><a href="index2.html">Explicaciónes</a></li>
+      <li><a href="Desarrollo.html">Desarrollo</a></li>
+      <li><a href="IDEhtml.html">HTML.IDE</a></li>
+      <li><a href="">Contacto</a></li>
+    </ul>
+  </nav>
+
+ 
+    <div class="contenedor1">
+      <h2 class="aline">Desarrollo web</h2>
+           <img class="some" src="https://64.media.tumblr.com/604ce393cef474ee082433b535f272d3/026a1af30e0751b5-79/s1280x1920/41b3973f52f7097c543034e142499635d267a65d.gifv" alt="" />
+      <em> ¿Que es el desarro web?</em>
+      <p class="parrafo">El desarrollo web es el proceso de crear y mantener sitios web a través de la utilización de tecnologías y lenguajes de programación. Implica el diseño, la implementación y la optimización de sitios web para que sean accesibles, funcionales y atractivos para los usuarios.<br /><br /><br />
+
+El desarrollo web se basa en diferentes componentes y tecnologías, que incluyen:<br /><br /><br />
+
+1. Lenguajes de marcado: HTML (HyperText Markup Language) se utiliza para estructurar y organizar el contenido de una página web. CSS (Cascading Style Sheets) se encarga de definir el aspecto visual y el diseño de los elementos HTML.<br /><br /><br />
+
+2. Lenguajes de programación: JavaScript es un lenguaje de programación utilizado para agregar interactividad y funcionalidad a las páginas web. Es ampliamente utilizado para crear efectos visuales, validar formularios, realizar peticiones a servidores, entre otras tareas.<br /><br /><br />
+
+3. Frameworks y bibliotecas: Estas herramientas proporcionan conjuntos de funciones predefinidas y estructuras de trabajo para facilitar el desarrollo web. Algunos ejemplos populares son Angular, React y Vue.js, que permiten crear aplicaciones web interactivas y de una sola página (SPA).<br /><br /><br />
+
+4. Bases de datos: Para sitios web dinámicos que requieren almacenar y recuperar datos, se utilizan sistemas de gestión de bases de datos como MySQL, PostgreSQL o MongoDB. Estas bases de datos permiten almacenar y acceder a información de manera eficiente.<br /><br /><br />
+
+5. Servidores web: Los servidores web son programas que se ejecutan en un servidor y entregan las páginas web a los navegadores de los usuarios. Algunos servidores web comunes son Apache, Nginx e IIS.<br /><br /><br />
+
+6. Hosting y dominios: Los sitios web deben ser alojados en servidores para estar disponibles en Internet. Los servicios de hosting ofrecen espacio en servidores para almacenar los archivos del sitio web, mientras que los dominios son las direcciones web que permiten a los usuarios acceder a un sitio específico.<br /><br /><br />
+
+El desarrollo web implica un proceso iterativo que generalmente incluye la planificación y el diseño del sitio, la codificación de las páginas web, la integración de bases de datos y la implementación de funcionalidades específicas. Además, se requiere realizar pruebas para asegurar el correcto funcionamiento del sitio web en diferentes navegadores y dispositivos.<br /><br /><br />
+
+En resumen, el desarrollo web es un proceso complejo que involucra la combinación de diferentes tecnologías para crear sitios web interactivos, atractivos y funcionales que satisfagan las necesidades de los usuarios y las empresas en el mundo digital.</p>
+    </div>
+    
+    
+  <script type="text/javascript" charset="utf-8">
+    // Bloquea caracteres especiales en los campos de entrada para prevenir ataques de inyección de código
+function sanitizeInput(input) {
+  return input.replace(/<|>|&|"|'|\)|\(|\/|\\|%|@|\$|#|\{|\}/g, '');
+}
+
+// Verifica el origen del formulario para prevenir ataques CSRF
+function checkReferrer(req) {
+  const referrer = req.headers.referer || '';
+  const host = req.headers.host || '';
+
+  if (referrer.indexOf(host) === -1) {
+    throw new Error('Possible CSRF attack.');
+  }
+}
+
+// Ejemplo de uso en el servidor para un formulario de inicio de sesión
+app.post('/login', function(req, res) {
+  try {
+    checkReferrer(req);
+
+    const username = sanitizeInput(req.body.username);
+    const password = sanitizeInput(req.body.password);
+
+    // Realizar la autenticación del usuario
+    // ...
+
+    res.send('Login successful!');
+  } catch (error) {
+    res.status(403).send('Access denied.');
+  }
+});
+
+  </script>
+ 
+</body>
+</html>

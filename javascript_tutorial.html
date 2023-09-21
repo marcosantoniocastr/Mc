@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> 
+  <title>Tutorial de JavaScript</title>
+  <style type="text/css" media="all">
+    /* Estilos CSS para la página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+}
+
+.section p {
+  margin-bottom: 5px;
+}
+
+pre {
+  background-color: #f5f5f5;
+  padding: 10px;
+  overflow: auto;
+  font-family: Consolas, monospace;
+}
+
+code {
+  color: #333;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Tutorial de JavaScript</h1>
+  
+  <h2>Introducción</h2>
+  <p>JavaScript es un lenguaje de programación de alto nivel utilizado para agregar interactividad y dinamismo a las páginas web.</p>
+  
+  <h2>Sintaxis básica</h2>
+  <p>La sintaxis de JavaScript es similar a otros lenguajes de programación. Aquí tienes un ejemplo básico:</p>
+  <pre><code>
+    <span style="color: green;">// Declaración de una variable</span>
+    var mensaje = <span style="color: blue;">"Hola, mundo!"</span>;
+    
+    <span style="color: green;">// Imprimir el mensaje en la consola</span>
+    console.log(mensaje);
+  </code></pre>
+  
+  <h2>Manipulación del DOM</h2>
+  <p>JavaScript se utiliza para interactuar con el Document Object Model (DOM) y modificar el contenido de una página web. Por ejemplo:</p>
+  <pre><code>
+    <span style="color: green;">// Obtener un elemento del DOM</span>
+    var elemento = document.getElementById(<span style="color: blue;">"miElemento"</span>);
+    
+    <span style="color: green;">// Cambiar el contenido del elemento</span>
+    elemento.innerHTML = <span style="color: blue;">"Nuevo contenido"</span>;
+  </code></pre>
+  
+  <h2>Eventos</h2>
+  <p>JavaScript permite responder a eventos, como hacer clic en un botón o mover el ratón. Aquí tienes un ejemplo:</p>
+  <pre><code>
+    <span style="color: green;">// Obtener el botón del DOM</span>
+    var boton = document.getElementById(<span style="color: blue;">"miBoton"</span>);
+    
+    <span style="color: green;">// Agregar un evento al botón</span>
+    boton.addEventListener(<span style="color: blue;">"click"</span>, function() {
+      alert(<span style="color: blue;">"¡Hiciste clic en el botón!"</span>);
+    });
+  </code></pre>
+</body>
+</html>

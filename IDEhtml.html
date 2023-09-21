@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor de Código</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.min.js"></script>
+  <style>
+    html,
+    body {
+  height: 100%;
+  width: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* Cambiar el color de fondo a blanco (#ffffff) */
+}
+
+    #editor {
+      height: 80vh;
+      border: 1px solid #ccc;
+    }
+
+    #result {
+      height: 80vh;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+    
+.contenedor1 {
+  padding: 15px;
+  max-width: 600px;
+  background-color: #ffffff; /* Cambiar el color de fondo a blanco (#ffffff) */
+  border-radius: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  overflow: auto;
+}
+
+.contenedor2 {
+  padding: 15px;
+  max-width: 600px;
+  background-color: #ffffff; /* Cambiar el color de fondo a blanco (#ffffff) */
+  border-radius: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  overflow: auto;
+}
+      
+      .sos {
+        text-align: center;
+      }
+      
+      .pad {
+        padding: 15px;
+        border-radius: 25px;
+      }
+    
+  </style>
+</head>
+<body>
+  <h1 class="sos">Azox-MT</h1>
+  <iframe class="pad" src="https://play.ht/embed/?article_url=https://play.ht/drafts/g3p5buF0qkOporKHuPIs9tc3nH73/Dhf0KaIcc&voice=es-ES_EnriqueV3Voice" scrolling="no" height="70px" width="80%" frameborder="0" allowfullscreen></iframe>
+  <div class="contenedor1">
+  <textarea id="editor"></textarea>
+  <button onclick="runCode()">Ejecutar</button>
+  <div class="contenedor2" id="result"></div>
+</div>
+  <script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+      lineNumbers: true,
+      mode: "htmlmixed"
+    });
+
+    function runCode() {
+      var code = editor.getValue();
+      var iframe = document.createElement("iframe");
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.frameBorder = 0;
+      document.getElementById("result").innerHTML = "";
+      document.getElementById("result").appendChild(iframe);
+
+      var iframeDocument = iframe.contentWindow.document;
+      iframeDocument.open();
+      iframeDocument.write(code);
+      iframeDocument.close();
+    }
+  </script>
+</body>
+</html>

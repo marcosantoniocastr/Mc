@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> 
+  <title>Ejemplos de JavaScript</title>
+<style type="text/css" media="all">
+  /* Estilos CSS para la página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+}
+
+.section p {
+  margin-bottom: 5px;
+}
+
+pre {
+  background-color: #f5f5f5;
+  padding: 10px;
+  overflow: auto;
+  font-family: Consolas, monospace;
+}
+
+code {
+  color: #333;
+}
+
+</style>
+</head>
+<body>
+  <h1>Ejemplos de JavaScript</h1>
+  
+  <div class="example">
+    <h3>Ejemplo 1: Saludo personalizado</h3>
+    <p>Este ejemplo muestra cómo mostrar un saludo personalizado utilizando JavaScript:</p>
+    <div class="code">
+      <pre>
+        <code>
+          var nombre = prompt("Ingrese su nombre:");
+          var saludo = "Hola, " + nombre + "!";
+          alert(saludo);
+        </code>
+      </pre>
+    </div>
+  </div>
+  
+  <div class="example">
+    <h3>Ejemplo 2: Suma de dos números</h3>
+    <p>Este ejemplo muestra cómo sumar dos números ingresados por el usuario utilizando JavaScript:</p>
+    <div class="code">
+      <pre>
+        <code>
+          var num1 = parseInt(prompt("Ingrese el primer número:"));
+          var num2 = parseInt(prompt("Ingrese el segundo número:"));
+          var suma = num1 + num2;
+          alert("La suma es: " + suma);
+        </code>
+      </pre>
+    </div>
+  </div>
+  
+  <div class="example">
+    <h3>Ejemplo 3: Generar números aleatorios</h3>
+    <p>Este ejemplo muestra cómo generar números aleatorios utilizando JavaScript:</p>
+    <div class="code">
+      <pre>
+        <code>
+          var numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+          alert("Número aleatorio: " + numeroAleatorio);
+        </code>
+      </pre>
+    </div>
+  </div>
+  
+</body>
+</html>

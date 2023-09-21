@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> 
+  <title>Tutorial de CSS</title>
+<style type="text/css" media="all">
+  /* Estilos CSS para la página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+}
+
+.section p {
+  margin-bottom: 5px;
+}
+
+pre {
+  background-color: #f5f5f5;
+  padding: 10px;
+  overflow: auto;
+  font-family: Consolas, monospace;
+}
+
+code {
+  color: #333;
+}
+
+</style>
+</head>
+<body>
+  <h1>Tutorial de CSS</h1>
+  
+  <div class="section">
+    <h2>Introducción a CSS</h2>
+    <p>CSS (Cascading Style Sheets) es un lenguaje de estilo utilizado para dar formato y diseñar páginas web.</p>
+  </div>
+  
+  <div class="section">
+    <h2>Sintaxis básica</h2>
+    <p>La sintaxis de CSS consiste en seleccionar elementos HTML y aplicar estilos utilizando propiedades y valores. Por ejemplo:</p>
+    <pre>
+      <code>
+        p {
+          color: blue;
+          font-size: 16px;
+        }
+      </code>
+    </pre>
+    <p>En este caso, todos los elementos &lt;p&gt; se mostrarán en color azul y con un tamaño de fuente de 16 píxeles.</p>
+  </div>
+  
+  <div class="section">
+    <h2>Selector de clase</h2>
+    <p>Los selectores de clase permiten aplicar estilos a un grupo de elementos específicos. Para definir una clase, utiliza el prefijo "." seguido del nombre de la clase. Por ejemplo:</p>
+    <pre>
+      <code>
+        .destacado {
+          background-color: yellow;
+          font-weight: bold;
+        }
+      </code>
+    </pre>
+    <p>En este caso, todos los elementos con la clase "destacado" tendrán un fondo amarillo y un peso de fuente en negrita.</p>
+  </div>
+  
+  <div class="section">
+    <h2>Selector de ID</h2>
+    <p>Los selectores de ID permiten aplicar estilos a un elemento único. Para definir un ID, utiliza el prefijo "#" seguido del nombre del ID. Por ejemplo:</p>
+    <pre>
+      <code>
+        #logo {
+          width: 200px;
+          height: 100px;
+        }
+      </code>
+    </pre>
+    <p>En este caso, el elemento con el ID "logo" tendrá un ancho de 200 píxeles y una altura de 100 píxeles.</p>
+  </div>
+  
+</body>
+</html>

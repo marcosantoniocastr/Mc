@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8"> 
+    <link rel="shortcut icon" href="robot.ico" type="image/x-icon" />
+    <title>web-MACM</title>
+    <style type="text/css" media="all">
+      
+      body {
+        margin: 0px;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .padre {
+        width: 60%;
+        border: 1px solid grey;
+        border-radius: 25px;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        border: none;
+      }
+      
+      .imagen {
+        width: 100%;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+      }
+      
+      .contenido {
+        padding: 15px;
+      }
+      
+      input {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border: none;
+      }
+      
+      .boton {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 20px;
+        border: none;
+        background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(29,33,37,1) 100%);
+color: #ffffff;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="padre">
+      <img  class="imagen" src="https://cdn.dribbble.com/users/791784/screenshots/4572855/media/995730d34cb4507b3fc1db4acaf10cc0.gif" alt="" />
+      
+      <div class="contenido">
+        <h2>Ingresa</h2>
+        <p>usuario: admin;<br />
+          contraseña: 123456;</p><br />
+        
+        <input id="usuario" type="text/submit/hidden/button/image" placeholder="Ingresa tu usuario" />
+        
+        <input id="password"type="password" placeholder="Contraseña"/>
+        
+        <button onclick="iniciarSección()" class="boton"type="submit">ingresar</button>
+      </div>
+    </div>
+    
+    <script type="text/javascript" charset="utf-8">
+      
+      function iniciarSección(){
+        var usuario = document.getElementById('usuario')
+        
+        var password = document.getElementById('password')
+        
+        if(usuario.value=='admin' && password.value=='123456'){
+
+            window.open('Inicio.html', '_self')
+
+        }else{
+            alert('Credenciales incorrectas')
+        }
+      }
+      
+      
+      // Bloquea caracteres especiales en los campos de entrada para prevenir ataques de inyección de código
+function sanitizeInput(input) {
+  return input.replace(/<|>|&|"|'|\)|\(|\/|\\|%|@|\$|#|\{|\}/g, '');
+}
+
+// Verifica el origen del formulario para prevenir ataques CSRF
+function checkReferrer(req) {
+  const referrer = req.headers.referer || '';
+  const host = req.headers.host || '';
+
+  if (referrer.indexOf(host) === -1) {
+    throw new Error('Possible CSRF attack.');
+  }
+}
+
+// Ejemplo de uso en el servidor para un formulario de inicio de sesión
+app.post('/login', function(req, res) {
+  try {
+    checkReferrer(req);
+
+    const username = sanitizeInput(req.body.username);
+    const password = sanitizeInput(req.body.password);
+
+    // Realizar la autenticación del usuario
+    // ...
+
+    res.send('Login successful!');
+  } catch (error) {
+    res.status(403).send('Access denied.');
+  }
+});
+
+    </script>
+    
+  </body>
+</html>
